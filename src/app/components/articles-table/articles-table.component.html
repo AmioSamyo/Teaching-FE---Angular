@@ -1,0 +1,38 @@
+<div class="article-container">
+  <div class="card">
+    <div class="first-column">
+      <div class="content">
+        <div class="title">Article:</div>
+        <div>{{articleDisplayed.articleName}}</div>
+      </div>
+      <div class="content">
+        <div class="title">Wholesaler:</div>
+        <div>{{articleDisplayed.articleWholesaler}}</div>
+      </div>
+    </div>
+    <div class="second-column">
+      <div class="title">Quantity:</div>
+      <div>{{articleDisplayed.receivedQuantity}}/{{articleDisplayed.orderedQuantity}}</div>
+    </div>
+  </div>
+  <div class="actions">
+    <div>
+      <button
+        mat-flat-button
+        color="accent"
+        (click)="addArticle()"
+      >
+        ADD ARTICLE
+      </button>
+    </div>
+    <div>
+      <button
+        mat-flat-button
+        color="primary"
+        (click)="selectArticle()"
+      >
+        SELECT ARTICLE
+      </button>
+    </div>
+  </div>
+</div>

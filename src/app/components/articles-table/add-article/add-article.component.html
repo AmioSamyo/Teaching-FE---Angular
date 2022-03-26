@@ -1,0 +1,44 @@
+<div mat-dialog-title>Add article:</div>
+<mat-dialog-content>
+  <div [formGroup]="article"
+       class="form-container">
+    <div class="form">
+      <mat-form-field appearance="outline">
+        <mat-label>Article Name:</mat-label>
+        <input matInput type="text" formControlName="articleName">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Article Wholesaler:</mat-label>
+        <input matInput type="text" formControlName="articleWholesaler">
+      </mat-form-field>
+    </div>
+    <div class="form">
+      <mat-form-field appearance="outline">
+        <mat-label>Article Quantity Ordered:</mat-label>
+        <input matInput type="number" formControlName="orderedQuantity">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Article Quantity Received:</mat-label>
+        <input matInput type="number" formControlName="receivedQuantity">
+      </mat-form-field>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button
+    mat-raised-button
+    (click)="back()"
+    tabindex="-1"
+  >
+    BACK
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="add()"
+    tabindex="1"
+    [disabled]="article.invalid"
+  >
+    CONFIRM
+  </button>
+</mat-dialog-actions>

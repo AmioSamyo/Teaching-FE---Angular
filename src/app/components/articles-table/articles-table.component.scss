@@ -1,0 +1,67 @@
+:host {
+  .article-container {
+    background-color: darkgray;
+    border-radius: 30px;
+    width: 60rem;
+    height: 19rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35%;
+
+    .card {
+      height: 15rem;
+      width: 40rem;
+      border-radius: 30px;
+      background-color: white;
+      color: black;
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      font-weight: bold;
+
+      .first-column {
+        display: flex;
+        width: 30rem;
+        justify-content: space-around;
+        flex-direction: column;
+        padding-left: 1rem;
+
+        .content {
+          display: flex;
+          justify-content: flex-start;
+        }
+      }
+
+      .second-column {
+        width: 9rem;
+        display: flex;
+        padding-top: 3.15rem;
+        padding-right: 1rem;
+        font-size: 24px;
+        color: darkred;
+      }
+
+      .title {
+        color: darkgrey;
+        margin-right: 1rem;
+        font-size: 16px;
+      }
+    }
+
+    .actions {
+      height: 15rem;
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      div {
+        button {
+          width: 9rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

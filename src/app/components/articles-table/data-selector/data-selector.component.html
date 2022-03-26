@@ -1,0 +1,27 @@
+<div mat-dialog-title class="title">
+  Select article:
+</div>
+<mat-dialog-content>
+  <mat-form-field appearance="outline">
+    <mat-select [formControl]="article">
+      <mat-option *ngFor="let article of articleList" [value]="article">{{article.articleName}} : {{article.articleWholesaler}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button
+    mat-raised-button
+    (click)="back()"
+    tabindex="-1"
+  >
+    Back
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="confirmArticle()"
+    tabindex="1"
+  >
+    Confirm
+  </button>
+</mat-dialog-actions>
